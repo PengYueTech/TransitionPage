@@ -1,0 +1,53 @@
+.loading-screen {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+    text-align: center;
+    background: #fff;
+}
+@-webkit-keyframes loading {
+    0% {
+     opacity: 1;
+    }
+    100% {
+     opacity: 0;
+    }
+}
+@-moz-keyframes loading {
+    0% {
+     opacity: 1;
+    }
+    100% {
+     opacity: 0;
+    }
+}
+@keyframes loading {
+    0% {
+     opacity: 1;
+    }
+    100% {
+     opacity: 0;
+    }
+}
+.loading-screen div {
+    width: 130px;
+    position: relative;
+    left: 50%;
+    margin:-104px 0 0 -65px;
+    top: 50%;
+}
+.loading-screen div em {
+    color: #333;
+    left: -50px;
+    position: absolute;
+    top: -50px;
+}
+/* control */
+.hidden {
+    display: none;
+}

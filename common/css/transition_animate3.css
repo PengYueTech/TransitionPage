@@ -1,0 +1,28 @@
+/* CSS Document */
+/* 默认动画 */
+.default.out {
+    -webkit-animation-name: slideouttoleft;
+    	-moz-animation-name: slideouttoleft;
+}
+.default.in {
+    -webkit-animation-name: slideinfromright;
+        -moz-animation-name: slideinfromright;
+}
+/* for Chrome and Safari */
+@-webkit-keyframes slideinfromright {
+    from { -webkit-transform: translateZ(-100px) rotateY(90deg);}
+    to { -webkit-transform: translateZ(-100px) rotateY(0deg);}
+}
+@-webkit-keyframes slideouttoleft {
+    from {-webkit-transform: translateZ(-100px) rotateY(0deg);}
+    to { -webkit-transform: translateZ(-100px) rotateY(90deg);}
+}
+/* for Mozilla FirefoY */
+@-moz-keyframes slideinfromright {
+    from {-moz-transform: translateZ(-100px) rotateY(90deg); }
+    to { -moz-transform: translateZ(-100px) rotateY(0deg);}
+}
+@-moz-keyframes slideouttoleft {
+    from { -moz-transform: translateZ(-100px) rotateY(90deg);}
+    to {  -moz-transform: translateZ(-100px) rotateY(0deg);}
+}

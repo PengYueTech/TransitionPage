@@ -1,0 +1,32 @@
+/* CSS Document */
+.ui-page {
+	position:absolute;
+	left:0;
+	top:0;	
+	backface-visibility: hidden;
+	-webkit-backface-visibility: hidden; 
+	-moz-backface-visibility: hidden;
+}
+.ui-mobile-viewport-transitioning,
+.ui-mobile-viewport-transitioning .ui-page {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.show {
+	display:block;
+}
+
+.hide {
+	display:none;
+}
+/* 动画控制 */
+.in, .out {
+    -webkit-animation-timing-function: ease-in-out;
+        -moz-animation-timing-function: ease-in-out;
+    -webkit-animation-duration: 500ms;
+        -moz-animation-duration: 500ms;
+}

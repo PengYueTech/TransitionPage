@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta content="telephone=no" name="format-detection">
+<meta content="width=device-width; initial-scale=1.0; maximum-scale=1.0; minimum-scale=1.0; user-scalable=false;" name="viewport">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<title>TransitionPage Demo</title>
+<link rel="stylesheet" href="../common/css/transition.css" />
+<link rel="stylesheet" href="../common/css/load.css" />
+<link rel="stylesheet" href="../common/css/transition_animate2.css" />
+<style>
+a.active {
+    color: red;
+}
+.loading-screen {
+    padding-top: 50%;
+    background-repeat: no-repeat;
+}
+</style>
+</head>
+<body>
+<div class="yindao"></div>
+<div class="hide">
+    <a class="goTo" href="#index"></a>
+    <a class="goTo" href="#page_one" data-ajax="./ajax_page_one.html"></a>
+    <a class="goTo" href="#page_two" data-ajax="./ajax_page_two.html"></a>
+</div>
+<!-- 页面加载 start -->
+<div class="loading-screen" data-bg-src="http://p1.wmpic.me/article/2015/04/14/1429001604_jSBIkYHw.jpg">
+    <em class="loading-text">正在加载<span>0</span>%</em>
+</div>
+<!-- 页面加载 end -->
+<div class="views-wrapper hidden">
+<!-- content start -->
+<script type="text/js-tmpl" id="index">
+<div class="ui-mobile-viewport-transitioning ui-page hide">
+    <h3>This is Index!</h3>
+    <ul class="nav">
+        <li><a href="#index" class="active">Index</a></li>
+        <li><a href="#page_one">Page_one</a></li>
+        <li><a href="#page_two">Page_two</a></li>
+    </ul>
+</div>
+</script>
+<script type="text/js-tmpl" id="page_one"></script>
+<script type="text/js-tmpl" id="page_two"></script>
+<!-- content end -->
+</div>
+<!-- footer start -->
+<script src="../common/js/zepto.min.js"></script>
+<script src="../common/js/zepto.getscript.js"></script>
+<script src="../common/js/zepto.touch.js"></script>
+<script src="../common/js/transition.js"></script>
+<script src="../common/js/underscore.min.js"></script>
+<script src="../common/js/zepto.fx.js"></script>
+<script src="../common/js/load.js"></script>
+<!-- footer end -->
+<script>
+$(function() {
+    $(document).delegate('.nav a', 'click', function() {
+        var $this = $(this);
+        if (!($this.hasClass('active'))) $('a.goTo[href=\'' + $(this).attr('href') + '\']').trigger('click');
+        return false;
+    });
+    //goTo
+    $('a.goTo').goTo();
+});
+</script>
+</body>
+</html>
